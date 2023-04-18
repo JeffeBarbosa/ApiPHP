@@ -45,6 +45,34 @@ final class RegisterModel
 
     private $nome;
 
+    private $telefone;
+
+    private $idade; 
+
+    
+    public function getTelefone(): int
+    {
+        return $this->telefone;
+    }
+    
+    public function setTelefone(int $telefone): RegisterModel
+    {
+        $this->telefone = $telefone;
+        return $this;
+    }
+    
+    public function getIdade(): int
+    {
+        return $this->idade;
+    }
+    
+    public function setIdade(int $idade): RegisterModel
+    {
+        $this->idade = $idade;
+        return $this;
+    }
+    
+    
     /**
      * @var int
      */

@@ -21,13 +21,15 @@ final class RegisterControlers{
     {
     
         
-        $registerDAO = new Register();
+       $registerDAO = new Register();
        $register = $registerDAO->getAllRegisters();
        $response = $response->withJson($register);
       
        return $response;
   
     }
+
+
 
     public function getLastRegisters(Request $request, Response $response, array $args): Response
     {
@@ -50,7 +52,9 @@ final class RegisterControlers{
                  ->setEmail($data['email'])
                  ->setEndereco($data['endereco'])        
                  ->setSenha($data['senha'])
-                 ->setNome($data['nome']);
+                 ->setNome($data['nome'])
+                 ->setIdade($data['idade'])
+                ->setTelefone($data['telefone']);
         $registerDAO->insertRegister($register);
 
         $response = $response->withJson([

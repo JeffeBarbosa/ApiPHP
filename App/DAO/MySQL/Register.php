@@ -3,9 +3,7 @@
 
 namespace App\DAO\MySQL;
 use App\Models\MySQL\RegisterModel;
-
-
-
+use FastRoute\RouteParser\Std;
 
 class Register extends Conexao
 {
@@ -30,7 +28,9 @@ class Register extends Conexao
             :email,
             :senha,
             :endereco,
-            :nome
+            :nome,
+            :idade,
+            :telefone
             );');
         $statement->execute([
             'tipo_cadastro' => $register->getTipoCadastro(),
@@ -38,8 +38,11 @@ class Register extends Conexao
             'senha' => $register->getSenha(),
             'endereco' => $register->getEndereco(),
             'nome' =>$register->getNome(),
+            'idade' =>$register->getIdade(),
+            'telefone' =>$register->getTelefone(),
         ]); 
     }
+
 
     public function getLastRegister(): array
     {

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 13-Abr-2023 às 04:12
+-- Tempo de geração: 18-Abr-2023 às 04:17
 -- Versão do servidor: 10.4.28-MariaDB
 -- versão do PHP: 8.2.4
 
@@ -33,23 +33,47 @@ CREATE TABLE `cadastro` (
   `email` varchar(45) DEFAULT NULL,
   `senha` varchar(45) DEFAULT NULL,
   `endereco` varchar(45) DEFAULT NULL,
-  `nome` varchar(100) DEFAULT NULL
+  `nome` varchar(100) DEFAULT NULL,
+  `idade` int(2) NOT NULL,
+  `telefone` int(12) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Extraindo dados da tabela `cadastro`
 --
 
-INSERT INTO `cadastro` (`idcadastro`, `tipo_cadastro`, `email`, `senha`, `endereco`, `nome`) VALUES
-(11, '1', 'jefe1', '1234', 'Rua ', 'jeferson'),
-(12, '1', 'jefe2', '1234', 'Rua ', 'jeferson'),
-(13, '1', 'jefe2', '1234', 'Rua ', 'jeferson'),
-(14, '1', 'jefe2', '1234', 'Rua ', 'jeferson'),
-(15, '1', 'jefe2', '1234', 'Rua ', 'jeferson'),
-(16, '1', 'jefe2', '1234', 'Rua ', 'jeferson'),
-(17, '1', 'jefe2', '1234', 'Rua ', 'jeferson'),
-(18, '1', 'jefe2', '1234', 'Rua ', 'jeferson'),
-(19, '1', 'jefe2', '1234', 'Rua ', 'jeferson');
+INSERT INTO `cadastro` (`idcadastro`, `tipo_cadastro`, `email`, `senha`, `endereco`, `nome`, `idade`, `telefone`) VALUES
+(11, '1', 'jefe1', '1234', 'Rua ', 'jeferson', 0, 0),
+(12, '1', 'jefe2', '1234', 'Rua ', 'jeferson', 0, 0),
+(13, '1', 'jefe2', '1234', 'Rua ', 'jeferson', 0, 0),
+(14, '1', 'jefe2', '1234', 'Rua ', 'jeferson', 0, 0),
+(15, '1', 'jefe2', '1234', 'Rua ', 'jeferson', 0, 0),
+(16, '1', 'jefe2', '1234', 'Rua ', 'jeferson', 0, 0),
+(17, '1', 'jefe2', '1234', 'Rua ', 'jeferson', 0, 0),
+(18, '1', 'jefe2', '1234', 'Rua ', 'jeferson', 0, 0),
+(19, '1', 'jefe2', '1234', 'Rua ', 'jeferson', 0, 0),
+(20, '1', 'email', 'senha', 'endereco', 'nome', 0, 0),
+(21, '1', 'ana', 'ana', 'ana', 'ana', 0, 0),
+(22, '1', 'tesst', 'teste', 'teste', 'teste', 0, 0),
+(23, '2', 'tete', 'tete', 'tete', 'tet', 0, 0),
+(24, '2', 'teadsa', 'dwadwa', 'tete', 'tete', 0, 0),
+(25, '2', '', '', '', '', 0, 0),
+(26, '2', 'te', 'te', 'te', 'tes', 0, 0),
+(27, '2', 'teste', 'teste', 'test', 'test', 0, 0),
+(28, '2', 't', 'este', 'teste', 'teste', 0, 0),
+(29, '2', '', '', '', '', 0, 0),
+(30, '1', '', '', '', '', 0, 0),
+(31, '2', '', '', '', '', 0, 0),
+(32, '2', '', '', '', '', 0, 0),
+(33, '2', '', '', '', '', 0, 0),
+(34, '2', '', '', '', '', 0, 0),
+(35, '2', '', '', '', '', 0, 0),
+(36, '1', '', '', '', '', 0, 0),
+(37, '1', 'daw', 'dawdw', 'adwa', 'dwa', 0, 0),
+(38, '2', '@hotmail.com-', 'teste', 'rua colubia', 'jefferson', 0, 0),
+(39, '2', 'ste', 'tete', 'te', 'tes', 0, 0),
+(40, '1', 'jefe2', '1234', 'Rua ', 'jeferson', 12, 91310876),
+(41, '1', 'jefe', 'kefe', 'jefe', 'jefe', 15, 994137276);
 
 -- --------------------------------------------------------
 
@@ -73,7 +97,12 @@ INSERT INTO `cad_profissional` (`desc_profissao`, `form_profissao`, `cadastro_id
 ('teste', 'teste', 12, 2, NULL),
 ('teste', 'teste', 11, 3, 1),
 ('teste', 'teste', 12, 4, 2),
-('teste', 'teste', 11, 6, 3);
+('teste', 'teste', 11, 6, 3),
+('Profissoes.Agrimensor', 'trabalhei em', 37, 7, 2),
+('teste', 'teste', 11, 8, 3),
+('Profissoes.Zootecnista', 'trabalhei na aurora e tudo mais', 38, 9, 8),
+('Profissoes.ServicodeDrones', 'tteste', 39, 10, 5),
+('teste', 'teste', 11, 11, 3);
 
 -- --------------------------------------------------------
 
@@ -92,7 +121,8 @@ CREATE TABLE `pos_servico` (
 --
 
 INSERT INTO `pos_servico` (`idpos_servico`, `avaliacao`, `servicos_idservico`) VALUES
-(1, 5, 2);
+(1, 5, 2),
+(2, 5, 2);
 
 -- --------------------------------------------------------
 
@@ -153,19 +183,19 @@ ALTER TABLE `servicos`
 -- AUTO_INCREMENT de tabela `cadastro`
 --
 ALTER TABLE `cadastro`
-  MODIFY `idcadastro` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `idcadastro` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 
 --
 -- AUTO_INCREMENT de tabela `cad_profissional`
 --
 ALTER TABLE `cad_profissional`
-  MODIFY `idprofissional` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `idprofissional` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT de tabela `pos_servico`
 --
 ALTER TABLE `pos_servico`
-  MODIFY `idpos_servico` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `idpos_servico` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de tabela `servicos`
