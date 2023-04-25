@@ -40,6 +40,15 @@ final class RegisterControlers{
        return $response;
   
     }
+
+    public function getRegistroProfissional(Request $request, Response $response, array $args): Response
+    {
+        $registerDAO = new Register();
+        $register = $registerDAO->getRegistroProfissional();
+        $response = $response->withJson($register);
+
+        return $response;
+    }
     
     public function insertRegister(Request $request, Response $response, array $args): Response
     {
@@ -93,4 +102,6 @@ final class RegisterControlers{
         return $response;
   
     }
+
+
 }

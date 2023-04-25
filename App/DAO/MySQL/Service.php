@@ -19,13 +19,15 @@ class Service extends Conexao
         return $services;
     }
     
+
+
     public function insertService(ServiceModel $service): void
     {
         $statement = $this->pdo->prepare('INSERT INTO servicos VALUES(
             null,
             :data_servico,
-            :cadastro_idcadastro,
-            :id_contratado
+            :id_contratado,
+            :cadastro_idcadastro
             );');
         $statement->execute([
             'data_servico' => $service->getDataServico(),
