@@ -14,7 +14,7 @@ abstract class Conexao
         $port = '3306';
         $user = 'root';
         $pass = '';
-        $dbname = 'maonaroda';
+        $dbname = 'mao';
    
         $dsn = "mysql:host={$host};dbname={$dbname};port={$port}";
 
