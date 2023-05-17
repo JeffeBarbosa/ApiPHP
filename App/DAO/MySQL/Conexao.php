@@ -10,11 +10,11 @@ abstract class Conexao
 
     public function __construct()
     {
-        $host = 'localhost';
+        $host = 'sql307.epizy.com';
         $port = '3306';
-        $user = 'root';
-        $pass = '';
-        $dbname = 'mao';
+        $user = 'epiz_34222681';
+        $pass = 'G1ekHeHBcJz';
+        $dbname = 'epiz_34222681_maonaroda';
    
         $dsn = "mysql:host={$host};dbname={$dbname};port={$port}";
 
@@ -25,3 +25,4 @@ abstract class Conexao
         );
     }
 }
+

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 16-Maio-2023 às 05:23
+-- Tempo de geração: 18-Abr-2023 às 04:17
 -- Versão do servidor: 10.4.28-MariaDB
 -- versão do PHP: 8.2.4
 
@@ -35,7 +35,7 @@ CREATE TABLE `cadastro` (
   `endereco` varchar(45) DEFAULT NULL,
   `nome` varchar(100) DEFAULT NULL,
   `idade` int(2) NOT NULL,
-  `telefone` bigint(15) NOT NULL
+  `telefone` int(12) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -73,33 +73,7 @@ INSERT INTO `cadastro` (`idcadastro`, `tipo_cadastro`, `email`, `senha`, `endere
 (38, '2', '@hotmail.com-', 'teste', 'rua colubia', 'jefferson', 0, 0),
 (39, '2', 'ste', 'tete', 'te', 'tes', 0, 0),
 (40, '1', 'jefe2', '1234', 'Rua ', 'jeferson', 12, 91310876),
-(41, '1', 'jefe', 'kefe', 'jefe', 'jefe', 15, 994137276),
-(42, '2', 'jedinhgp_', '1234', 'jardim peperi', 'jefferson', 18, 2147483647),
-(43, '1', 'dwadwa', 'dawdw', 'daw', 'daw', 48, 2147483647),
-(44, '1', 'dawdw', 'dwadwa', 'dwadwa', 'dwdw', 48, 991310876),
-(45, '1', 'dwadwa', 'daw', 'dwadw', 'dwadw', 48, 2147483647),
-(46, '2', 'jefe2', '1234', 'Rua ', 'jeferson', 12, 91310876),
-(47, '2', 'jefe2', '1234', 'Rua ', 'jeferson', 12, 91310876),
-(48, '2', 'jefe2', '1234', 'Rua ', 'jeferson', 12, 91310876),
-(49, '2', 'jefe2', '1234', 'Rua ', 'jeferson', 12, 91310876),
-(50, '2', 'jefe2', '1234', 'Rua ', 'jeferson', 12, 91310876),
-(51, '2', 'jefe2', '1234', 'Rua ', 'jeferson', 12, 91310876),
-(52, '2', 'jefe2', '1234', 'Rua ', 'jeferson', 12, 91310876),
-(53, '2', 'dwadaw', 'da', 'dawda', 'dwdw', 48, 991310876),
-(54, '2', 'dwadaw', 'da', 'dawda', 'dwdw', 48, 991310876),
-(55, '2', 'dwdwa', 'daw', 'wadw', 'awaw', 48, 456),
-(56, '2', 'dwadwa', 'dadwa', 'dwada', 'dawda', 48, 4884),
-(57, '2', 'dawdwad', 'dwadwa', 'dwadwdwadwa', 'dawd', 4, 4),
-(58, '2', 'wadwa', 'wadwad', 'dwad', 'dwadwa', 4, 4),
-(59, '2', 'adwa', 'adaw', 'dwa', 'dwda', 4, 87),
-(60, '2', 'dwa', 'dwdwad', 'dwadw', 'dwadw', 4, 4),
-(61, '2', 'dwad', 'daw', 'daw', 'dwdwa', 7, 878),
-(62, '2', 'wadaw', 'dwadwa', 'daw', 'dwadwa', 4, 4),
-(63, '2', 'jefinho_smo@hotmail.com', '1234', 'rua columbia', 'jefferson', 22, 991310876),
-(64, '2', 'dawda', 'daw', 'daw', 'dwad', 4, 4),
-(65, '2', 'dwad', 'dwadaw', 'dw', 'wda', 4, 4),
-(66, '1', 'te', 'ad', 'te', 'te', 4, 4),
-(67, '2', 'jefe2', '1234', 'Rua ', 'jeferson', 12, 4991310876);
+(41, '1', 'jefe', 'kefe', 'jefe', 'jefe', 15, 994137276);
 
 -- --------------------------------------------------------
 
@@ -128,19 +102,7 @@ INSERT INTO `cad_profissional` (`desc_profissao`, `form_profissao`, `cadastro_id
 ('teste', 'teste', 11, 8, 3),
 ('Profissoes.Zootecnista', 'trabalhei na aurora e tudo mais', 38, 9, 8),
 ('Profissoes.ServicodeDrones', 'tteste', 39, 10, 5),
-('teste', 'teste', 11, 11, 3),
-('Profissoes.Gestaoambiental', 'ja trablaehi em tudo', 42, 12, 4),
-('teste', 'teste', 11, 13, 3),
-('Profissoes.Agrimensor', 'dwda', 54, 14, 2),
-('Profissoes.EngenheiroAgronomo', 'dwaaw', 56, 15, 1),
-('Profissoes.EngenheiroAgronomo', 'dwa', 57, 16, 1),
-('Profissoes.EngenheiroAgronomo', 'dwa', 58, 17, 1),
-('Profissoes.Gestaoambiental', 'daw', 59, 18, 4),
-('Profissoes.EngenheiroAgronomo', 'w', 60, 19, 1),
-('Profissoes.EngenheiroAgronomo', 'dwadw', 61, 20, 1),
-('Profissoes.EngenheiroAgronomo', 'dwa', 62, 21, 1),
-('Profissoes.Zootecnista', 'Trabalhei dbhnwiuajdoawddawwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwaddawadwa', 63, 22, 8),
-('Profissoes.EngenheiroAgronomo', ' dwdw', 64, 23, 1);
+('teste', 'teste', 11, 11, 3);
 
 -- --------------------------------------------------------
 
@@ -160,15 +122,7 @@ CREATE TABLE `pos_servico` (
 
 INSERT INTO `pos_servico` (`idpos_servico`, `avaliacao`, `servicos_idservico`) VALUES
 (1, 5, 2),
-(2, 5, 2),
-(3, 3, 18),
-(4, 2, 6),
-(5, 3, 15),
-(6, 3, 25),
-(7, 4, 20),
-(8, 3, 22),
-(9, 5, 22),
-(10, 3, 2);
+(2, 5, 2);
 
 -- --------------------------------------------------------
 
@@ -188,24 +142,7 @@ CREATE TABLE `servicos` (
 --
 
 INSERT INTO `servicos` (`idservico`, `data_servico`, `id_contratado`, `cadastro_idcadastro`) VALUES
-(2, '2023-04-11', 11, 11),
-(5, '2023-04-23', 11, 11),
-(6, '2023-04-23', 11, 11),
-(13, '2023-04-23', 11, 11),
-(15, '2023-04-23', 11, 11),
-(16, '2023-04-23', 9, 11),
-(17, '2023-04-23', 9, 11),
-(18, '2023-04-23', 12, 11),
-(19, '2023-04-23', 9, 11),
-(20, '2023-04-23', 10, 12),
-(21, '2023-04-23', 16, 12),
-(22, '2023-04-23', 12, 12),
-(23, '2023-04-25', 15, 11),
-(24, '2023-05-10', 9, 11),
-(25, '2023-05-10', 9, 11),
-(26, '2023-05-14', 9, 12),
-(27, '2023-05-15', 16, 11),
-(28, '2023-05-15', 10, 11);
+(2, '2023-04-11', 11, 11);
 
 --
 -- Índices para tabelas despejadas
@@ -228,7 +165,7 @@ ALTER TABLE `cad_profissional`
 -- Índices para tabela `pos_servico`
 --
 ALTER TABLE `pos_servico`
-  ADD PRIMARY KEY (`idpos_servico`) USING BTREE,
+  ADD PRIMARY KEY (`idpos_servico`,`servicos_idservico`),
   ADD KEY `fk_pos_servico_servicos1` (`servicos_idservico`);
 
 --
@@ -236,8 +173,7 @@ ALTER TABLE `pos_servico`
 --
 ALTER TABLE `servicos`
   ADD PRIMARY KEY (`idservico`),
-  ADD KEY `fk_servico_cadastro` (`cadastro_idcadastro`),
-  ADD KEY `fk_id_contratado` (`id_contratado`);
+  ADD KEY `fk_servico_cadastro` (`cadastro_idcadastro`);
 
 --
 -- AUTO_INCREMENT de tabelas despejadas
@@ -247,25 +183,25 @@ ALTER TABLE `servicos`
 -- AUTO_INCREMENT de tabela `cadastro`
 --
 ALTER TABLE `cadastro`
-  MODIFY `idcadastro` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
+  MODIFY `idcadastro` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 
 --
 -- AUTO_INCREMENT de tabela `cad_profissional`
 --
 ALTER TABLE `cad_profissional`
-  MODIFY `idprofissional` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `idprofissional` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT de tabela `pos_servico`
 --
 ALTER TABLE `pos_servico`
-  MODIFY `idpos_servico` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `idpos_servico` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de tabela `servicos`
 --
 ALTER TABLE `servicos`
-  MODIFY `idservico` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `idservico` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Restrições para despejos de tabelas
