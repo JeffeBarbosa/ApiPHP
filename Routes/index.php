@@ -11,7 +11,14 @@ $app = new \Slim\App(slimConfiguration());
 
 $app->get('/registro', RegisterControlers::class . ':getRegister');
 $app->post('/registro', RegisterControlers::class . ':insertRegister');
-$app->put('/registro', RegisterControlers::class . ':updateRegister');
+$app->put('/registro/{id}/{senha}', function ($request, $response, $args){
+    $pdo = new PDO('mysql:host=localhost;dbname=mao', 'root', '');
+    $id = $args['id'];
+    $senha = $args['senha'];
+    $sql = "UPDATE cadastro SET senha = '$senha' where idcadastro = '$id'";
+    $stmt = $pdo->prepare($sql); 
+    $stmt->execute();
+});
 $app->delete('/registro', RegisterControlers::class . ':deleteRegister');
 $app->post('/registro/profissional', RegisterControlers::class . ':insertRegisterProfissional');
 
@@ -79,6 +86,17 @@ $app->get('/validacao/avaliacao/{id}', function ($request, $response, $args){
     $pdo = new PDO('mysql:host=localhost;dbname=mao', 'root', '');
     $id = $args['id'];
     $sql = "select pos.avaliacao as avaliacao from pos_servico pos inner join servicos s on s.idservico = pos.servicos_idservico where s.idservico = '$id';";
+    $stmt = $pdo->prepare($sql); 
+    $stmt->execute();
+    $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    return $response->withJson($results);
+
+});
+
+$app->get('/alteracao/{email}', function ($request, $response, $args){
+    $pdo = new PDO('mysql:host=localhost;dbname=mao', 'root', '');
+    $email = $args['email'];
+    $sql = "SELECT senha , idcadastro FROM cadastro WHERE email = '$email';";
     $stmt = $pdo->prepare($sql); 
     $stmt->execute();
     $results = $stmt->fetchAll(PDO::FETCH_ASSOC);

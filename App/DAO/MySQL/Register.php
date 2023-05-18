@@ -26,6 +26,8 @@ class Register extends Conexao
         return $registers;
     }
     
+   
+
     public function insertRegister(RegisterModel $register): void
     {
         $statement = $this->pdo->prepare('INSERT INTO cadastro VALUES(
