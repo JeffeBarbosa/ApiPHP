@@ -1,41 +1,6 @@
 {
     "packages": [
         {
-            "name": "container-interop/container-interop",
-            "version": "1.1.0",
-            "version_normalized": "1.1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/container-interop/container-interop.git",
-                "reference": "fc08354828f8fd3245f77a66b9e23a6bca48297e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/container-interop/container-interop/zipball/fc08354828f8fd3245f77a66b9e23a6bca48297e",
-                "reference": "fc08354828f8fd3245f77a66b9e23a6bca48297e",
-                "shasum": ""
-            },
-            "time": "2014-12-30T15:22:37+00:00",
-            "type": "library",
-            "installation-source": "dist",
-            "autoload": {
-                "psr-4": {
-                    "Interop\\Container\\": "src/Interop/Container/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "Promoting the interoperability of container objects (DIC, SL, etc.)",
-            "support": {
-                "issues": "https://github.com/container-interop/container-interop/issues",
-                "source": "https://github.com/container-interop/container-interop/tree/master"
-            },
-            "abandoned": "psr/container",
-            "install-path": "../container-interop/container-interop"
-        },
-        {
             "name": "guzzlehttp/guzzle",
             "version": "7.5.0",
             "version_normalized": "7.5.0.0",
@@ -255,23 +220,23 @@
         },
         {
             "name": "guzzlehttp/psr7",
-            "version": "2.4.4",
-            "version_normalized": "2.4.4.0",
+            "version": "2.5.0",
+            "version_normalized": "2.5.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "3cf1b6d4f0c820a2cf8bcaec39fc698f3443b5cf"
+                "reference": "b635f279edd83fc275f822a1188157ffea568ff6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/3cf1b6d4f0c820a2cf8bcaec39fc698f3443b5cf",
-                "reference": "3cf1b6d4f0c820a2cf8bcaec39fc698f3443b5cf",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/b635f279edd83fc275f822a1188157ffea568ff6",
+                "reference": "b635f279edd83fc275f822a1188157ffea568ff6",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.2.5 || ^8.0",
                 "psr/http-factory": "^1.0",
-                "psr/http-message": "^1.0",
+                "psr/http-message": "^1.1 || ^2.0",
                 "ralouphie/getallheaders": "^3.0"
             },
             "provide": {
@@ -286,18 +251,15 @@
             "suggest": {
                 "laminas/laminas-httphandlerrunner": "Emit PSR-7 responses"
             },
-            "time": "2023-03-09T13:19:02+00:00",
+            "time": "2023-04-17T16:11:26+00:00",
             "type": "library",
             "extra": {
                 "bamarni-bin": {
                     "bin-links": true,
                     "forward-command": false
-                },
-                "branch-alias": {
-                    "dev-master": "2.4-dev"
                 }
             },
-            "installation-source": "dist",
+            "installation-source": "source",
             "autoload": {
                 "psr-4": {
                     "GuzzleHttp\\Psr7\\": "src/"
@@ -357,7 +319,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/psr7/issues",
-                "source": "https://github.com/guzzle/psr7/tree/2.4.4"
+                "source": "https://github.com/guzzle/psr7/tree/2.5.0"
             },
             "funding": [
                 {
@@ -486,30 +448,25 @@
         },
         {
             "name": "psr/container",
-            "version": "2.0.2",
-            "version_normalized": "2.0.2.0",
+            "version": "1.1.2",
+            "version_normalized": "1.1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/container.git",
-                "reference": "c71ecc56dfe541dbd90c5360474fbc405f8d5963"
+                "reference": "513e0666f7216c7459170d56df27dfcefe1689ea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/container/zipball/c71ecc56dfe541dbd90c5360474fbc405f8d5963",
-                "reference": "c71ecc56dfe541dbd90c5360474fbc405f8d5963",
+                "url": "https://api.github.com/repos/php-fig/container/zipball/513e0666f7216c7459170d56df27dfcefe1689ea",
+                "reference": "513e0666f7216c7459170d56df27dfcefe1689ea",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.4.0"
             },
-            "time": "2021-11-05T16:47:00+00:00",
+            "time": "2021-11-05T16:50:12+00:00",
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.0.x-dev"
-                }
-            },
-            "installation-source": "dist",
+            "installation-source": "source",
             "autoload": {
                 "psr-4": {
                     "Psr\\Container\\": "src/"
@@ -536,37 +493,37 @@
             ],
             "support": {
                 "issues": "https://github.com/php-fig/container/issues",
-                "source": "https://github.com/php-fig/container/tree/2.0.2"
+                "source": "https://github.com/php-fig/container/tree/1.1.2"
             },
             "install-path": "../psr/container"
         },
         {
             "name": "psr/http-client",
-            "version": "1.0.1",
-            "version_normalized": "1.0.1.0",
+            "version": "1.0.2",
+            "version_normalized": "1.0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/http-client.git",
-                "reference": "2dfb5f6c5eff0e91e20e913f8c5452ed95b86621"
+                "reference": "0955afe48220520692d2d09f7ab7e0f93ffd6a31"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/http-client/zipball/2dfb5f6c5eff0e91e20e913f8c5452ed95b86621",
-                "reference": "2dfb5f6c5eff0e91e20e913f8c5452ed95b86621",
+                "url": "https://api.github.com/repos/php-fig/http-client/zipball/0955afe48220520692d2d09f7ab7e0f93ffd6a31",
+                "reference": "0955afe48220520692d2d09f7ab7e0f93ffd6a31",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.0 || ^8.0",
-                "psr/http-message": "^1.0"
+                "psr/http-message": "^1.0 || ^2.0"
             },
-            "time": "2020-06-29T06:28:15+00:00",
+            "time": "2023-04-10T20:12:12+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
                     "dev-master": "1.0.x-dev"
                 }
             },
-            "installation-source": "dist",
+            "installation-source": "source",
             "autoload": {
                 "psr-4": {
                     "Psr\\Http\\Client\\": "src/"
@@ -579,7 +536,7 @@
             "authors": [
                 {
                     "name": "PHP-FIG",
-                    "homepage": "http://www.php-fig.org/"
+                    "homepage": "https://www.php-fig.org/"
                 }
             ],
             "description": "Common interface for HTTP clients",
@@ -591,37 +548,37 @@
                 "psr-18"
             ],
             "support": {
-                "source": "https://github.com/php-fig/http-client/tree/master"
+                "source": "https://github.com/php-fig/http-client/tree/1.0.2"
             },
             "install-path": "../psr/http-client"
         },
         {
             "name": "psr/http-factory",
-            "version": "1.0.1",
-            "version_normalized": "1.0.1.0",
+            "version": "1.0.2",
+            "version_normalized": "1.0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/http-factory.git",
-                "reference": "12ac7fcd07e5b077433f5f2bee95b3a771bf61be"
+                "reference": "e616d01114759c4c489f93b099585439f795fe35"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/http-factory/zipball/12ac7fcd07e5b077433f5f2bee95b3a771bf61be",
-                "reference": "12ac7fcd07e5b077433f5f2bee95b3a771bf61be",
+                "url": "https://api.github.com/repos/php-fig/http-factory/zipball/e616d01114759c4c489f93b099585439f795fe35",
+                "reference": "e616d01114759c4c489f93b099585439f795fe35",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.0.0",
-                "psr/http-message": "^1.0"
+                "psr/http-message": "^1.0 || ^2.0"
             },
-            "time": "2019-04-30T12:38:16+00:00",
+            "time": "2023-04-10T20:10:41+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
                     "dev-master": "1.0.x-dev"
                 }
             },
-            "installation-source": "dist",
+            "installation-source": "source",
             "autoload": {
                 "psr-4": {
                     "Psr\\Http\\Message\\": "src/"
@@ -634,7 +591,7 @@
             "authors": [
                 {
                     "name": "PHP-FIG",
-                    "homepage": "http://www.php-fig.org/"
+                    "homepage": "https://www.php-fig.org/"
                 }
             ],
             "description": "Common interfaces for PSR-7 HTTP message factories",
@@ -649,36 +606,36 @@
                 "response"
             ],
             "support": {
-                "source": "https://github.com/php-fig/http-factory/tree/master"
+                "source": "https://github.com/php-fig/http-factory/tree/1.0.2"
             },
             "install-path": "../psr/http-factory"
         },
         {
             "name": "psr/http-message",
-            "version": "1.0.1",
-            "version_normalized": "1.0.1.0",
+            "version": "1.1",
+            "version_normalized": "1.1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/http-message.git",
-                "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363"
+                "reference": "cb6ce4845ce34a8ad9e68117c10ee90a29919eba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/http-message/zipball/f6561bf28d520154e4b0ec72be95418abe6d9363",
-                "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363",
+                "url": "https://api.github.com/repos/php-fig/http-message/zipball/cb6ce4845ce34a8ad9e68117c10ee90a29919eba",
+                "reference": "cb6ce4845ce34a8ad9e68117c10ee90a29919eba",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.0"
+                "php": "^7.2 || ^8.0"
             },
-            "time": "2016-08-06T14:39:51+00:00",
+            "time": "2023-04-04T09:50:52+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0.x-dev"
+                    "dev-master": "1.1.x-dev"
                 }
             },
-            "installation-source": "dist",
+            "installation-source": "source",
             "autoload": {
                 "psr-4": {
                     "Psr\\Http\\Message\\": "src/"
@@ -705,7 +662,7 @@
                 "response"
             ],
             "support": {
-                "source": "https://github.com/php-fig/http-message/tree/master"
+                "source": "https://github.com/php-fig/http-message/tree/1.1"
             },
             "install-path": "../psr/http-message"
         },
@@ -758,24 +715,27 @@
         },
         {
             "name": "slim/slim",
-            "version": "3.7.0",
-            "version_normalized": "3.7.0.0",
+            "version": "3.12.4",
+            "version_normalized": "3.12.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/slimphp/Slim.git",
-                "reference": "4254e40d81559e35cdf856bcbaca5f3af468b7ef"
+                "reference": "ce3cb65a06325fc9fe3d0223f2ae23113a767304"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/slimphp/Slim/zipball/4254e40d81559e35cdf856bcbaca5f3af468b7ef",
-                "reference": "4254e40d81559e35cdf856bcbaca5f3af468b7ef",
+                "url": "https://api.github.com/repos/slimphp/Slim/zipball/ce3cb65a06325fc9fe3d0223f2ae23113a767304",
+                "reference": "ce3cb65a06325fc9fe3d0223f2ae23113a767304",
                 "shasum": ""
             },
             "require": {
-                "container-interop/container-interop": "^1.1",
+                "ext-json": "*",
+                "ext-libxml": "*",
+                "ext-simplexml": "*",
                 "nikic/fast-route": "^1.0",
                 "php": ">=5.5.0",
                 "pimple/pimple": "^3.0",
+                "psr/container": "^1.0",
                 "psr/http-message": "^1.0"
             },
             "provide": {
@@ -783,11 +743,11 @@
             },
             "require-dev": {
                 "phpunit/phpunit": "^4.0",
-                "squizlabs/php_codesniffer": "^2.5"
+                "squizlabs/php_codesniffer": "^3.6.0"
             },
-            "time": "2016-12-20T20:30:47+00:00",
+            "time": "2021-10-02T19:38:22+00:00",
             "type": "library",
-            "installation-source": "dist",
+            "installation-source": "source",
             "autoload": {
                 "psr-4": {
                     "Slim\\": "Slim"
@@ -799,24 +759,24 @@
             ],
             "authors": [
                 {
-                    "name": "Rob Allen",
-                    "email": "rob@akrabat.com",
-                    "homepage": "http://akrabat.com"
-                },
-                {
                     "name": "Josh Lockhart",
                     "email": "hello@joshlockhart.com",
                     "homepage": "https://joshlockhart.com"
                 },
                 {
-                    "name": "Gabriel Manricks",
-                    "email": "gmanricks@me.com",
-                    "homepage": "http://gabrielmanricks.com"
-                },
-                {
                     "name": "Andrew Smith",
                     "email": "a.smith@silentworks.co.uk",
                     "homepage": "http://silentworks.co.uk"
+                },
+                {
+                    "name": "Rob Allen",
+                    "email": "rob@akrabat.com",
+                    "homepage": "http://akrabat.com"
+                },
+                {
+                    "name": "Gabriel Manricks",
+                    "email": "gmanricks@me.com",
+                    "homepage": "http://gabrielmanricks.com"
                 }
             ],
             "description": "Slim is a PHP micro framework that helps you quickly write simple yet powerful web applications and APIs",
@@ -829,40 +789,50 @@
             ],
             "support": {
                 "issues": "https://github.com/slimphp/Slim/issues",
-                "source": "https://github.com/slimphp/Slim/tree/3.7.0"
+                "source": "https://github.com/slimphp/Slim/tree/3.12.4"
             },
+            "funding": [
+                {
+                    "url": "https://opencollective.com/slimphp",
+                    "type": "open_collective"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/slim/slim",
+                    "type": "tidelift"
+                }
+            ],
             "install-path": "../slim/slim"
         },
         {
             "name": "symfony/deprecation-contracts",
-            "version": "v3.0.2",
-            "version_normalized": "3.0.2.0",
+            "version": "v3.2.1",
+            "version_normalized": "3.2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/deprecation-contracts.git",
-                "reference": "26954b3d62a6c5fd0ea8a2a00c0353a14978d05c"
+                "reference": "e2d1534420bd723d0ef5aec58a22c5fe60ce6f5e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/deprecation-contracts/zipball/26954b3d62a6c5fd0ea8a2a00c0353a14978d05c",
-                "reference": "26954b3d62a6c5fd0ea8a2a00c0353a14978d05c",
+                "url": "https://api.github.com/repos/symfony/deprecation-contracts/zipball/e2d1534420bd723d0ef5aec58a22c5fe60ce6f5e",
+                "reference": "e2d1534420bd723d0ef5aec58a22c5fe60ce6f5e",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.0.2"
+                "php": ">=8.1"
             },
-            "time": "2022-01-02T09:55:41+00:00",
+            "time": "2023-03-01T10:25:55+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "3.0-dev"
+                    "dev-main": "3.3-dev"
                 },
                 "thanks": {
                     "name": "symfony/contracts",
                     "url": "https://github.com/symfony/contracts"
                 }
             },
-            "installation-source": "dist",
+            "installation-source": "source",
             "autoload": {
                 "files": [
                     "function.php"
@@ -885,7 +855,7 @@
             "description": "A generic function and convention to trigger deprecation notices",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/deprecation-contracts/tree/v3.0.2"
+                "source": "https://github.com/symfony/deprecation-contracts/tree/v3.2.1"
             },
             "funding": [
                 {

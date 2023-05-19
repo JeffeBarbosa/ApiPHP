@@ -105,6 +105,8 @@ $app->get('/alteracao/{email}', function ($request, $response, $args){
 });
 
 
+
+
 $app->run();
 ?>
 
