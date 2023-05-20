@@ -10,11 +10,11 @@ abstract class Conexao
 
     public function __construct()
     {
-        $host = 'localhost';
+        $host = 'us-cdbr-east-06.cleardb.net';
         $port = '3306';
-        $user = 'root';
-        $pass = '';
-        $dbname = 'mao';
+        $user = 'b413b820b4ff89';
+        $pass = '3086ad99';
+        $dbname = 'heroku_32741d351a800fa';
    
         $dsn = "mysql:host={$host};dbname={$dbname};port={$port}";
 
