@@ -89,19 +89,7 @@ final class RegisterControlers{
         return $response;
     }
 
-    public function updateRegister(Request $request, Response $response, array $args): Response
-    {
-        $response->getBody()->write("caralho");
-        return $response;
-  
-    }
 
-    public function deleteRegister(Request $request, Response $response, array $args): Response
-    {
-        $response->getBody()->write("caralho");
-        return $response;
-  
-    }
 
 
 }

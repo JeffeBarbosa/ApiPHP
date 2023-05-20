@@ -8,7 +8,6 @@ use App\Controlers\PosServiceControler;
 
 $app = new \Slim\App(slimConfiguration());
 
-
 $app->get('/registro', RegisterControlers::class . ':getRegister');
 $app->post('/registro', RegisterControlers::class . ':insertRegister');
 $app->put('/registro/{id}/{senha}', function ($request, $response, $args){
@@ -19,7 +18,7 @@ $app->put('/registro/{id}/{senha}', function ($request, $response, $args){
     $stmt = $pdo->prepare($sql); 
     $stmt->execute();
 });
-$app->delete('/registro', RegisterControlers::class . ':deleteRegister');
+$app->delete('/registro', \RegisterControlers::class . ':deleteRegister');
 $app->post('/registro/profissional', RegisterControlers::class . ':insertRegisterProfissional');
 
 $app->get('/registro/ultimo', RegisterControlers::class . ':getLastRegisters');
@@ -35,8 +34,6 @@ $app->get('/posServico', PosServiceControler::class . ':getPosService');
 $app->post('/posServico', PosServiceControler::class . ':insertPosService');
 $app->put('/posServico', PosServiceControler::class . ':updatePosService');
 $app->delete('/posServico', PosServiceControler::class . ':deletePosService');
-
-
 
 $app->get('/login/{email}/{senha}', function ($request, $response, $args) {
     $pdo = new PDO('mysql:host=us-cdbr-east-06.cleardb.net;dbname=heroku_32741d351a800fa', 'b413b820b4ff89', '3086ad99');
@@ -103,7 +100,6 @@ $app->get('/alteracao/{email}', function ($request, $response, $args){
     return $response->withJson($results);
 
 });
-
 
 
 
