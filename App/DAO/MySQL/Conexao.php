@@ -26,11 +26,11 @@ abstract class Conexao
 
         $port = '3306';
 
-        $user = 'b413b820b4ff89';
+        $user = 'bc6646643021b6';
 
-        $pass = '3086ad99';
+        $pass = 'a18f36d5';
 
-        $dbname = 'heroku_32741d351a800fa';
+        $dbname = 'heroku_1949f4ff8829ba1';
 
    
 
