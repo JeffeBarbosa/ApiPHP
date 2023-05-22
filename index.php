@@ -9,4 +9,3 @@ echo("3");
 require_once "./Routes/index.php";
 
 
-echo("teste");
