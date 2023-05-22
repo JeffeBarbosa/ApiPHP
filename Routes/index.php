@@ -101,8 +101,6 @@ $app->get('/alteracao/{email}', function ($request, $response, $args){
 
 });
 
-echo("primeiro");
-
 $app->run();
 ?>
 
