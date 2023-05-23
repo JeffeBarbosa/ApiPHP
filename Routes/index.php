@@ -71,7 +71,18 @@ $app->get('/avaliacao/{id}', function ($request, $response, $args){
 $app->get('/historico/{id}', function ($request, $response, $args){
     $pdo = new PDO('mysql:host=us-cdbr-east-06.cleardb.net;dbname=heroku_1949f4ff8829ba1', 'bc6646643021b6', 'a18f36d5');
     $id = $args['id'];
-    $sql = "select c.nome as nomecontratado , s.data_servico as data , s.idservico as id from servicos s inner join cadastro c ON c.idcadastro = s.cadastro_idcadastro where s.id_contratado = '$id';";
+    $sql = "select s.idservico, s.data_servico, c.nome , ps.avaliacao from servicos s inner join pos_servico ps on s.idservico = ps.servicos_idservico inner join cadastro c on c.idcadastro = s.cadastro_idcadastro where s.id_contratado = '$id';";
+    $stmt = $pdo->prepare($sql); 
+    $stmt->execute();
+    $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    return $response->withJson($results);
+
+});
+
+$app->get('/prestador/id/{id}', function ($request, $response, $args){
+    $pdo = new PDO('mysql:host=us-cdbr-east-06.cleardb.net;dbname=heroku_1949f4ff8829ba1', 'bc6646643021b6', 'a18f36d5');
+    $id = $args['id'];
+    $sql = "select cp.idprofissional  from cad_profissional cp inner join cadastro c  on cp.cadastro_idcadastro = c.idcadastro  where c.idcadastro ='$id';";
     $stmt = $pdo->prepare($sql); 
     $stmt->execute();
     $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
