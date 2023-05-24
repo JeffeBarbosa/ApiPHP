@@ -20,12 +20,6 @@ class Register extends Conexao
         return $registers;
     }
 
-    public function getRegistroProfissional(): array
-    {
-        $registers = $this->pdo->query('SELECT P.idprofissional,C.tipo_cadastro, C.nome, C.telefone , P.form_profissao as Profissao, P.idprofissao from cadastro C inner join cad_profissional P on C.idcadastro = P.cadastro_idcadastro where C.tipo_cadastro = 2;')->fetchAll(\PDO::FETCH_ASSOC);
-        return $registers;
-    }
-    
    
 
     public function insertRegister(RegisterModel $register): void

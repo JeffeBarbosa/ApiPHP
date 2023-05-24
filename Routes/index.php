@@ -112,6 +112,19 @@ $app->get('/alteracao/{email}', function ($request, $response, $args){
 
 });
 
+$app->get('registro/profissional/{id}', function ($request, $response, $args){
+    $pdo = new PDO('mysql:host=us-cdbr-east-06.cleardb.net;dbname=heroku_1949f4ff8829ba1', 'bc6646643021b6', 'a18f36d5');
+    $email = $args['id'];
+    $sql = "SELECT P.idprofissional,C.tipo_cadastro, C.nome, C.telefone , P.form_profissao as Profissao, P.idprofissao from cadastro C inner join cad_profissional P on C.idcadastro = P.cadastro_idcadastro where C.tipo_cadastro = 2 and p.idprofissional != '$id';";
+    $stmt = $pdo->prepare($sql); 
+    $stmt->execute();
+    $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    return $response->withJson($results);
+
+});
+
+
+
 $app->run();
 ?>
 
