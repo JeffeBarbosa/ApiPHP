@@ -112,6 +112,7 @@ $app->get('/alteracao/{email}', function ($request, $response, $args){
 
 });
 
+
 $app->get('/registro/profissional/{id}', function ($request, $response, $args){
     $pdo = new PDO('mysql:host=us-cdbr-east-06.cleardb.net;dbname=heroku_1949f4ff8829ba1', 'bc6646643021b6', 'a18f36d5');
     $id = $args['id'];
@@ -122,8 +123,6 @@ $app->get('/registro/profissional/{id}', function ($request, $response, $args){
     return $response->withJson($results);
 
 });
-
-
 
 $app->run();
 ?>
